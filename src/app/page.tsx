@@ -165,8 +165,8 @@ const Home = () => {
                 Join the club and get the benefits
               </h1>
               <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-                Sign up for our newsletter and receive exclusive offers on new
-                ranges, sales, pop up stores and more
+                Sign up for our newsletter and receive exclusive <br /> offers
+                on new ranges, sales, pop up stores and more
               </p>
             </div>
             <div className="flex  lg:w-1/3 w-full sm:flex-row  md:w-2/3  flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-center">
@@ -178,14 +178,14 @@ const Home = () => {
                   className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
-              <button className="text-white bg-[#2A254B] border-0 py-2 px-6 focus:outline-none hover:bg-[#504691] rounded">
+              <button className="text-white ml-[16px] bg-[#2A254B] border-0 py-2 px-6 focus:outline-none hover:bg-[#504691] rounded">
                 SignUp
               </button>
             </div>
           </div>
         </section>
-        <section className="text-gray-600 body-font p-24">
-          <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <section className="text-gray-600 body-font ">
+          <div className="container mx-auto flex px-12  md:flex-row flex-col items-start">
             <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
               <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
                 From a studio in London to a global brand with over 400 outlets
@@ -198,7 +198,7 @@ const Home = () => {
                 hotbed for the London interior design community.
               </p>
               <div className="flex justify-center">
-                <button className="inline-flex ml-[-16px] text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-32">
+                <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-32">
                   Get in touch
                 </button>
               </div>
