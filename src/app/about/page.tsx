@@ -171,7 +171,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      <section className="text-gray-600 body-font my-12 bg-[#f9f9f9] p-24">
+      <section className="text-gray-600 body-font my-12 bg-[#f9f9f9] ">
         <div className="container px-5 py-24 mx-auto bg-white">
           <div className="flex flex-col text-center w-full mb-12">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">

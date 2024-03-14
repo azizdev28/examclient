@@ -88,7 +88,7 @@ const Footer = () => {
                 </li>
               </nav>
             </div>
-            <div className=" md:w-1/2 w-full px-4">
+            <div className=" md:w-1/2 w-full sm:px-0">
               <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
                 <div className="relative flex flex-col justify-start w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
                   <label className="leading-7 line-clamp-1  text-lg text-gray-100">
@@ -98,7 +98,7 @@ const Footer = () => {
                     type="text"
                     id="footer-field"
                     name="footer-field"
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full text-white bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
                 <button className="lg:mt-2  xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
