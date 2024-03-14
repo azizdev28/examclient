@@ -48,6 +48,15 @@ const Header = () => {
           Login
         </Link>
       </div>
+      <div className="flex justify-center  gap-12 my-6 flex-wrap	">
+        <p>Plant pots</p>
+        <p>Ceramics</p>
+        <p>Tables</p>
+        <p>Chairs</p>
+        <p>Crocery</p>
+        <p>Tableware</p>
+        <p>Cutlery</p>
+      </div>
     </header>
   );
 };
