@@ -5,8 +5,6 @@ import { ThreeCircles } from "react-loader-spinner";
 const LoadingPage = () => {
   return (
     <div className="flex justify-center items-center">
-      {" "}
-      render(
       <ThreeCircles
         visible={true}
         height="100"
@@ -16,7 +14,6 @@ const LoadingPage = () => {
         wrapperStyle={{}}
         wrapperClass=""
       />
-      )
     </div>
   );
 };

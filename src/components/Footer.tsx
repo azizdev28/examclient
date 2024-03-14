@@ -88,7 +88,7 @@ const Footer = () => {
                 </li>
               </nav>
             </div>
-            <div className="lg:w-1/2 md:w-1/2 w-full px-4">
+            <div className=" md:w-1/2 w-full px-4">
               <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
                 <div className="relative flex flex-col justify-start w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
                   <label className="leading-7 line-clamp-1  text-lg text-gray-100">
