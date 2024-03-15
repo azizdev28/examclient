@@ -1,6 +1,10 @@
 import Link from "next/link";
 import React from "react";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Avion | Login",
+  description: "Siz izlagan uy jihozlari !!!",
+};
 const LoginPage = () => {
   return (
     <div>

@@ -1,3 +1,8 @@
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Avion | About",
+  description: "Siz izlagan uy jihozlari !!!",
+};
 import Image from "next/image";
 import React from "react";
 import Delivery from "@/image/homeimg/Delivery.png";
