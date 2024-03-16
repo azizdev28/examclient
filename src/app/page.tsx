@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 const Home = () => {
   return (
     <main>
-     
       {/* Hero section started */}
       <div>
         <section className="text-gray-600 body-font ">
