@@ -1,13 +1,15 @@
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "Avion | Product",
-  description: "Siz izlagan uy jihozlari !!!",
-};
+"use client";
 import Image from "next/image";
-import React from "react";
 import productHeo from "@/image/homeimg/productHeo.png";
 import ProductCard from "@/components/ProductCard";
+import useProductStore from "@/store";
+import { useEffect } from "react";
 const ProductPage = () => {
+  const { products, fetchProducts } = useProductStore();
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
   return (
     <div className="container mx-auto">
       <div className="flex justify-center items-center h-[209px] bg-repeat bg-contain ">
@@ -57,8 +59,10 @@ const ProductPage = () => {
             </p>
           </div>
         </div>
-        <div>
-          <ProductCard />
+        <div className="grid w-full grid-cols-1 my-24 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3">
+          {products.map((product: any) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </div>
       </section>
     </div>

@@ -7,8 +7,8 @@ import { FiShoppingCart } from "react-icons/fi";
 
 const Header = () => {
   return (
-    <header className="text-gray-600 body-font">
-      <div className="container mx-auto  justify-between border-b-2 sm:flex sm:flex-row sm:items-center flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <header className="text-gray-600  body-font">
+      <div className="container mx-auto    justify-between border-b-2 sm:flex sm:flex-row sm:items-center flex flex-wrap p-5 flex-col md:flex-row items-center">
         <Link
           href="#"
           className="flex title-font font-medium items-center text-gray-900 md:mb-0"
@@ -31,9 +31,7 @@ const Header = () => {
           <Link href="/products" className=" hover:text-gray-900">
             Product
           </Link>
-          <Link href="/productdetails" className=" hover:text-gray-900">
-            Product Details
-          </Link>
+
           <input type="text" placeholder="Searching..." />
           <Link href="/shop" className=" hover:text-gray-900">
             <FiShoppingCart />

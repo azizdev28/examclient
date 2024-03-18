@@ -1,8 +1,14 @@
 export type ProductType = {
-  id: string;
+  id: number;
   title: string;
   price: number;
   description: string;
   category: string;
-  avatar: string;
+  image: string;
+  ququantity: number;
 };
+
+export interface Props {
+  product: ProductType;
+  fill?: boolean;
+}
