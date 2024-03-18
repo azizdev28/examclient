@@ -14,8 +14,37 @@ const ShopPage = () => {
     setProducts(updatedCart);
   };
 
-  const handleIncrement = (id: number) => {};
-  const handleDecroment = (id: number) => {};
+  const handleIncrement = (id: number) => {
+    const updatedCart = products.map((product) => {
+      if (product.id == id) {
+        return {
+          ...product,
+          ququantity: product.ququantity + 1,
+        };
+      }
+      return product;
+    });
+    localStorage.setItem("carts", JSON.stringify(updatedCart));
+    setProducts(updatedCart);
+  };
+  const handleDecroment = (id: number) => {
+    const existProduct = products.find((product) => product.id == id);
+    if (existProduct?.ququantity == 1) {
+      removeProducts(existProduct.id);
+    } else {
+      const updatedCart = products.map((product) => {
+        if (product.id == id) {
+          return {
+            ...product,
+            ququantity: product.ququantity - 1,
+          };
+        }
+        return product;
+      });
+      localStorage.setItem("carts", JSON.stringify(updatedCart));
+      setProducts(updatedCart);
+    }
+  };
   // const [products, setProducts] = useState<ProductType[]>([]);
   // const removeProduct = (id: number) => {
   //   const updatedCart = products.filter((product) => product.id !== id);
@@ -54,9 +83,11 @@ const ShopPage = () => {
                 </div>
                 <div className="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
                   <div className="flex items-center border-gray-100">
-                    <span className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50">
-                      {" "}
-                      -{" "}
+                    <span
+                      className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"
+                      onClick={() => handleDecroment(product.id)}
+                    >
+                      -
                     </span>
                     <input
                       className="h-8 w-8 border bg-white text-center text-xs outline-none"
@@ -64,7 +95,10 @@ const ShopPage = () => {
                       min="1"
                       value={product.ququantity}
                     />
-                    <span className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50">
+                    <span
+                      className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"
+                      onClick={() => handleIncrement(product.id)}
+                    >
                       {" "}
                       +{" "}
                     </span>
