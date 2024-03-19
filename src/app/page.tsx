@@ -7,8 +7,7 @@ import Purchase from "@/image/homeimg/Purchase.png";
 import Sprout from "@/image/homeimg/Sprout.png";
 import HomeProductSection from "@/components/homeproduct";
 import ImgWrapper from "@/image/homeimg/HeaderWrapper.png";
-import { Metadata } from "next";
-// import ProductCard from "@/components/ProductCard";
+import HeroBg from "@/image/homeimg/heroBg.png";
 import useProductStore from "@/store";
 
 const Home = () => {
@@ -49,8 +48,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        {/* Hero section end */}
-        {/* Section next  card in info */}
+
         <section className="text-gray-600 body-font">
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-col text-center w-full mb-10">
@@ -151,7 +149,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-        {/* Next section product */}
         <section>
           <HomeProductSection />
         </section>
@@ -202,10 +199,10 @@ const Home = () => {
               </div>
             </div>
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-              <img
+              <Image
                 className="object-cover object-center  rounded"
                 alt="hero"
-                src="https://dummyimage.com/720x600"
+                src={HeroBg}
               />
             </div>
           </div>
