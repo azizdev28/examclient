@@ -32,7 +32,6 @@ const Header = () => {
             Product
           </Link>
 
-          <input type="text" placeholder="Searching..." />
           <Link href="/shop" className=" hover:text-gray-900">
             <FiShoppingCart />
           </Link>

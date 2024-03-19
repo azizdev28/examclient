@@ -183,6 +183,7 @@ const ProductsDetailes = async ({ params: { id } }: Props) => {
             </div>
           </div>
         </div>
+        <section></section>
       </section>
     );
   } catch (error) {
