@@ -1,7 +1,24 @@
 import { create } from "zustand";
 
+// Define product type
+type Product = {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+  ququantity: number;
+};
+
+// Define store type
+type ProductStore = {
+  products: Product[];
+  fetchProducts: () => Promise<void>;
+};
+
 // Create a Zustand store
-const useProductStore = create((set) => ({
+const useProductStore = create<ProductStore>((set) => ({
   products: [],
   fetchProducts: async () => {
     try {
