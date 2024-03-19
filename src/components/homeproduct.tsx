@@ -1,6 +1,5 @@
 import useProductStore from "@/store";
 import React, { useEffect, useState } from "react";
-import CustomImage from "./image";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,7 +9,7 @@ const HomeProductSection = () => {
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [fetchProducts]);
 
   const handleViewCollection = () => {
     setShowAllProducts(true);

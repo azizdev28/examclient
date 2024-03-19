@@ -15,7 +15,7 @@ const Home = () => {
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [fetchProducts]);
   return (
     <main>
       {/* Hero section started */}
