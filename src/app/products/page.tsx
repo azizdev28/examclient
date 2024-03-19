@@ -3,7 +3,8 @@ import Image from "next/image";
 import productHeo from "@/image/homeimg/productHeo.png";
 import ProductCard from "@/components/ProductCard";
 import useProductStore from "@/store";
-import { useEffect } from "react";
+import { FC, useEffect } from "react";
+import { ProductType } from "@/interface";
 const ProductPage = () => {
   const { products, fetchProducts } = useProductStore();
 
@@ -60,7 +61,7 @@ const ProductPage = () => {
           </div>
         </div>
         <div className="grid w-full grid-cols-1 my-24 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3">
-          {products.map((product: any) => (
+          {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

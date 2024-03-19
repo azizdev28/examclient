@@ -1,22 +1,28 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import Delivery from "@/image/homeimg/Delivery.png";
 import Checkmark from "@/image/homeimg/Checkmark.png";
 import Purchase from "@/image/homeimg/Purchase.png";
 import Sprout from "@/image/homeimg/Sprout.png";
 import HomeProductSection from "@/components/homeproduct";
+import ImgWrapper from "@/image/homeimg/HeaderWrapper.png";
 import { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "Avion | Home",
-  description: "Siz izlagan uy jihozlari !!!",
-};
+// import ProductCard from "@/components/ProductCard";
+import useProductStore from "@/store";
+
 const Home = () => {
+  const { products, fetchProducts } = useProductStore();
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
   return (
     <main>
       {/* Hero section started */}
       <div>
         <section className="text-gray-600 body-font ">
-          <div className="container mx-auto  bg-[#2A254B] flex px-12 py-24 md:flex-row flex-col items-center">
+          <div className="container flex-wrap mx-auto  bg-[#2A254B] flex px-12 py-24 md:flex-row flex-col items-center">
             <div className="lg:flex-grow p-5 md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
               <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-200">
                 The furniture brand for the future, with timeless designs
@@ -34,10 +40,11 @@ const Home = () => {
               </p>
             </div>
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-              <img
-                className="object-cover object-center rounded"
-                alt="hero"
-                src="https://dummyimage.com/720x600"
+              <Image
+                src={ImgWrapper}
+                alt="ImgWrapper"
+                width={1000}
+                height={1000}
               />
             </div>
           </div>

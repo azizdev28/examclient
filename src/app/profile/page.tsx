@@ -1,28 +1,7 @@
-"use client";
-import React, { useEffect } from "react";
-import useProductStore from "@/store/index";
-import Image from "next/image";
+import React from "react";
 
-const ProductList = () => {
-  const { products, fetchProducts } = useProductStore();
-
-  useEffect(() => {
-    fetchProducts();
-  }, []);
-
-  return (
-    <div>
-      <h2>Products</h2>
-      <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            <h2>{product.title}</h2>
-            <Image src={product.image} width={50} height={50} />
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+const ProfilePage = () => {
+  return <div>ProfilePage</div>;
 };
 
-export default ProductList;
+export default ProfilePage;
